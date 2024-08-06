@@ -1,7 +1,7 @@
 create database BDA_23162121020;
 show databases; 
 
-use BDA_23162121027;
+use BDA_23162121020;
 
 create table Client_master( Client_no varchar(6), Name varchar(20), City varchar(15), Pincode numeric(8), State varchar(15), Bal_due numeric(10,2));
 desc Client_master;
