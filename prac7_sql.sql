@@ -38,7 +38,7 @@ WHERE salary = (SELECT MAX(salary) FROM Employee WHERE salary < (SELECT MAX(sala
 SELECT dept, COUNT(eid) AS no_of_employees
 FROM Employee
 GROUP BY dept;
-SELECT ename
+SELECT dept , COUNT(ename)
 FROM Employee
 GROUP BY dept
 HAVING COUNT(eid) < 2;
