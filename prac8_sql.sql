@@ -1,7 +1,7 @@
 USE sakila;
+SET SQL_SAFE_UPDATES = 0;
 
 -- DROP VIEW name_actor;
-DESC language;
 
 CREATE VIEW name_actor AS
 SELECT actor_id , first_name , last_name
@@ -15,7 +15,7 @@ FROM actor
 ORDER BY last_name DESC;
 SELECT * FROM actor_desc;
 
-SELECT * FROM actor;
+-- SELECT * FROM actor;
 
 DROP VIEW actor_desc;
 
@@ -30,6 +30,10 @@ SELECT * FROM W_lang;
 UPDATE W_lang
 SET name = 'Spanish'
 WHERE language_id = 8;
+SELECT * FROM W_lang;
+
+DELETE FROM language
+WHERE name = 'Spanish';
 SELECT * FROM W_lang;
 
 CREATE VIEW U_lang AS
@@ -47,3 +51,5 @@ UPDATE W_lang
 SET last_update = '2020-07-13 10:00:19'
 WHERE language_id = 9;
 SELECT * FROM W_lang;
+
+-- DROP VIEW W_lang,U_lang;
